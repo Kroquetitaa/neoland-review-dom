@@ -57,19 +57,28 @@ const countries2 = [
     ];
 
 let div2 = document.createElement('div');
+let ul3 = document.createElement('ul');
 
 for (const values of countries2) {
         let h4 = document.createElement('h4');
         let img = document.createElement('img');
+        let li = document.createElement('li');
         h4.innerHTML += values.title;
         img.src += values.imgUrl;
-        div2.appendChild(h4);
-        div2.appendChild(img);
+        li.appendChild(h4);
+        li.appendChild(img);
+        ul3.appendChild( li );
 }
-
+div2.appendChild( ul3 );
 body.appendChild( div2 );
-
-
 
 // 1.5 Basandote en el ejercicio anterior. Crea un botón que elimine el último 
 // elemento de la lista.
+
+let button = document.createElement('button');
+button.innerHTML = 'Boton Eliminar ult.Elemento';
+body.appendChild( button);
+
+button.addEventListener('click', () =>{
+    ul3.removeChild(ul3.lastChild);
+})
