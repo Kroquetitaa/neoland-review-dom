@@ -32,7 +32,6 @@ let ul2 = document.createElement('ul');
 cars.forEach( e => {
     let li = document.createElement('li');
     li.innerHTML += e;
-    console.log( li );
     ul2.appendChild( li );
 })
 
@@ -47,3 +46,30 @@ div.appendChild( ul2 );
 // 	{title: 'Random title', imgUrl: 'https://picsum.photos/300/200?random=4'},
 // 	{title: 'Random title', imgUrl: 'https://picsum.photos/300/200?random=5'}
 // ];
+
+
+const countries2 = [
+    	{title: 'Random title', imgUrl: 'https://picsum.photos/300/200?random=1'}, 
+    	{title: 'Random title', imgUrl: 'https://picsum.photos/300/200?random=2'},
+    	{title: 'Random title', imgUrl: 'https://picsum.photos/300/200?random=3'},
+    	{title: 'Random title', imgUrl: 'https://picsum.photos/300/200?random=4'},
+    	{title: 'Random title', imgUrl: 'https://picsum.photos/300/200?random=5'}
+    ];
+
+let div2 = document.createElement('div');
+
+for (const values of countries2) {
+        let h4 = document.createElement('h4');
+        let img = document.createElement('img');
+        h4.innerHTML += values.title;
+        img.src += values.imgUrl;
+        div2.appendChild(h4);
+        div2.appendChild(img);
+}
+
+body.appendChild( div2 );
+
+
+
+// 1.5 Basandote en el ejercicio anterior. Crea un botón que elimine el último 
+// elemento de la lista.
